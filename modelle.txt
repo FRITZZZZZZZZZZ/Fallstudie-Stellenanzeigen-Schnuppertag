@@ -1,0 +1,46 @@
+Job
+- Job-ID
+- Company-ID
+- Titel
+- Location
+- Responsibilities
+- Requierements
+- Category ID
+
+Company
+- Company-ID
+- Name
+- Industry
+- Description
+- Open positions
+
+Category
+- ID
+- Employment type
+- Experience level
+- Industry
+
+User
+- User-ID
+- Name
+- Description
+- Posts
+- curiculum vitae
+
+Chat
+- Chat-ID
+- Message-IDs 
+- ID 
+
+Message
+- Content
+- Time
+- ID
+- Sender
+- Receiver
+
+Posts
+- Pictures
+- Text Content
+- Time
+- ID
