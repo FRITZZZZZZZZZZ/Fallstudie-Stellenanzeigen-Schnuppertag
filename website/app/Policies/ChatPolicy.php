@@ -13,7 +13,7 @@ class ChatPolicy
      */
     public function viewAny(User $user): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -21,7 +21,7 @@ class ChatPolicy
      */
     public function view(User $user, Chat $chat): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -29,7 +29,7 @@ class ChatPolicy
      */
     public function create(User $user): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -37,7 +37,7 @@ class ChatPolicy
      */
     public function update(User $user, Chat $chat): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -45,7 +45,7 @@ class ChatPolicy
      */
     public function delete(User $user, Chat $chat): bool
     {
-        //
+        return true;
     }
 
     /**
@@ -53,7 +53,7 @@ class ChatPolicy
      */
     public function restore(User $user, Chat $chat): bool
     {
-        //
+        return false;
     }
 
     /**
@@ -61,6 +61,6 @@ class ChatPolicy
      */
     public function forceDelete(User $user, Chat $chat): bool
     {
-        //
+        return false;
     }
 }
