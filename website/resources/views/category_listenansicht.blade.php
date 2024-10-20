@@ -1,3 +1,21 @@
+
 <div>
-    <!-- Let all your things have their places; let each part of your business have its time. - Benjamin Franklin -->
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Time</th>
+            <th>Experience</th>
+            <th>Location</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach($categories as $category)
+            <tr>
+                <td>{ {$category->id} }</td>
+                
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>
