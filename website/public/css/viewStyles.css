@@ -10,9 +10,29 @@
     }
     .header {
         display: flex;
+        flex-direction: column;
+    }
+
+    .breadcrump_env {
+        width: 75%;
+    }
+
+    .breadcrumps {
+        display: flex;
+        justify-content: center;
+    }
+
+    .breadcrump_link {
+        color: grey;
+        cursor: pointer;
+        font-style: georgia;
+        text-decoration: none;
+    }
+
+    .navigation {
+        display: flex;
         justify-content: space-between;
         align-items: center; 
-
         height: 100px;
     }
 
@@ -30,13 +50,18 @@
         align-items: center; 
         height: 100px;
         width: 100%;
+        background-color: lightgrey;
     }
 
-    .home{
+    .home {
         display: flex;
         flex: 0.5;
         align-items: center;
         justify-content: center;
+    }
+
+    .text_env {
+        width: 60%;
     }
 
     .view_select {
@@ -48,15 +73,36 @@
         align-items: center;
     }
 
-    .button{
+    .button {
         height: 50;
-        width: 150;
+        width: 120;
         color: black;
         font-weight: 800;
         font-size: 20;
         background-color: white;
         padding: 10;
-        border-radius: 15px;
         border: solid;
         cursor: pointer;
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+        font-style: georgia;
+    }
+
+    .images {
+        width: 60%;
+        border-color: black;
+        border: solid;
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+        margin: 50px;
+    }
+
+    .heading_1 {
+        font-style: georgia;
+        margin: 40px;
+        text-align: left;
+        margin-left: 0px;
+    }
+
+    .text_left {
+        font-style: georgia;
+        text-align: left;
     }
