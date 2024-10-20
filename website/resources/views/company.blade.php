@@ -21,6 +21,20 @@
     </div>
 </div>
 
-<div class="main">Test</div>
+<div class="main">
+<div class=content_field>
+        <h2>Listenansicht Company</h2>
+        <table class="tabelle">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Open Positions</th>
+                <th>Industry Category IDs</th>
+                <th>Post IDs</th>
+            </tr>
+        </table>
+    </div>
+</div>
 <div class="footer"><a class="breadcrump_link" href="https://github.com/FRITZZZZZZZZZZ/Fallstudie-Stellenanzeigen-Schnuppertag">Dieses Projekt auf GitHub</a></div>
 </body>
