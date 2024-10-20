@@ -1,3 +1,0 @@
-<div>
-    comapny listenansicht
-</div>
