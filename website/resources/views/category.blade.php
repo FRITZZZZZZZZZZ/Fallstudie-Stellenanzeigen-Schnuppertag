@@ -22,15 +22,9 @@
 </div>
 
 <div class="main">
-    <div class="content_field">
-        <h2>Category erstellen</h2>
-        <form class="form" method="POST">
-        @csrf <!-- {{ csrf_field() }} -->
-            <input class="input_field" type="text" name="industry" placeholder="Industry">
-            <input class="input_field" type="text" name="experience" placeholder="Experience Level">
-            <input class="input_field" type="text" name="employement" placeholder="Employement Type">
-            <input class="button" type="submit" value="Create">
-        </form>
+    
+    <div>
+        <a href="http://127.0.0.1:8000/category/create"><button class="button">Create new Category</button></a>
     </div>
 
     <div class=content_field>
@@ -38,13 +32,19 @@
         <table class="tabelle">
             <thead>
                 <tr>
-                    <th>ID</th>
                     <th>Industry</th>
                     <th>Experience Level</th>
                     <th>Employement Type</th>
                 </tr>
             </thead>
-            
+            <tbody>
+                @foreach ($categorys as $category)
+                <tr>
+                    <td>{{ $category->industry_id }}</td>
+                    <td>{{ $category->experience_level }}</td>
+                    <td>{{ $category->employement_type }}</td>
+                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
@@ -52,13 +52,25 @@
     <div class=content_field>
             <h2>Detailansicht Category</h2>
             <table class="tabelle">
-                <tr>
-                    <th>Time</th>
-                    <th>ID</th>
-                    <th>Industry</th>
-                    <th>Experience Level</th>
-                    <th>Employement Type</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Industry</th>
+                        <th>Experience Level</th>
+                        <th>Employement Type</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                @foreach ($categorys as $category)
+                    <tr>
+                        <td>{{ $category->id }}</td>
+                        <td>{{ $category->industry_id }}</td>
+                        <td>{{ $category->experience_level }}</td>
+                        <td>{{ $category->employement_type }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
             </table>
     </div>
 </div>

@@ -15,7 +15,8 @@ Route::get('/job', [JobOffersController::class, 'index' ]);
 
 
 Route::get('/category', [CategoryController::class, 'index' ]);
-Route::post('/category', [CategoryController::class, 'create']);
+Route::get('/category/create', [CategoryController::class, 'create']);
+Route::post('/category/create', [CategoryController::class, 'store']);
 
 
 
