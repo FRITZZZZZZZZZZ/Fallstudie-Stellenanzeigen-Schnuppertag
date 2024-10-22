@@ -22,17 +22,49 @@
 </div>
 
 <div class="main">
-<div class=content_field>
+    <div class="content_field">
+        <h2>Category erstellen</h2>
+        <form class="form" method="POST">
+        @csrf <!-- {{ csrf_field() }} -->
+            <input class="input_field" type="text" name="industry" placeholder="Industry">
+            <input class="input_field" type="text" name="experience" placeholder="Experience Level">
+            <input class="input_field" type="text" name="employement" placeholder="Employement Type">
+            <input class="button" type="submit" value="Create">
+        </form>
+    </div>
+
+    <div class=content_field>
         <h2>Listenansicht Category</h2>
         <table class="tabelle">
-            <tr>
-                <th>ID</th>
-                <th>Industry</th>
-                <th>Experience Level</th>
-                <th>Employement Type</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Industry</th>
+                    <th>Experience Level</th>
+                    <th>Employement Type</th>
+                </tr>
+            </thead>
+            
+            </tbody>
         </table>
     </div>
+
+    <div class=content_field>
+            <h2>Detailansicht Category</h2>
+            <table class="tabelle">
+                <tr>
+                    <th>Time</th>
+                    <th>ID</th>
+                    <th>Industry</th>
+                    <th>Experience Level</th>
+                    <th>Employement Type</th>
+                </tr>
+            </table>
+    </div>
 </div>
-<div class="footer"><a class="breadcrump_link" href="https://github.com/FRITZZZZZZZZZZ/Fallstudie-Stellenanzeigen-Schnuppertag">Dieses Projekt auf GitHub</a></div>
+    
+<div class="footer">
+    <a class="breadcrump_link" href="https://github.com/FRITZZZZZZZZZZ/Fallstudie-Stellenanzeigen-Schnuppertag">Dieses Projekt auf GitHub</a>
+</div>
+
 </body>

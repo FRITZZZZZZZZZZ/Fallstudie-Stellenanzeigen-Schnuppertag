@@ -13,7 +13,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categorys = Category::all();
+        return view('category', ['categorys' => $categorys]);
     }
 
     /**
@@ -21,7 +22,13 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $category = new Category();
+        $category->industry_id = request('industry');
+        $category->experience_level = request('experience');
+        $category->employement_type = request('employement');
+        $category->save();
+        $categorys = Category::all();
+        return view('category', ['categorys' => $categorys]);
     }
 
     /**

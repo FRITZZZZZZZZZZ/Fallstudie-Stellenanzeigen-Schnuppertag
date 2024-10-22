@@ -50,7 +50,6 @@
         align-items: center; 
         height: 100px;
         width: 100%;
-        background-color: lightgrey;
     }
 
     .home {
@@ -80,10 +79,10 @@
         font-weight: 800;
         font-size: 20;
         background-color: white;
-        padding: 10;
         border: solid;
         cursor: pointer;
         font-style: georgia;
+        margin-top: 30px;
     }
 
     .images {
@@ -107,7 +106,7 @@
     }
 
     .content_field {
-        width: 80%;
+        width: 80%;        
     }
 
     .tabelle {
@@ -115,4 +114,22 @@
         border-color: lightgrey;
         border: solid;
         width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .form {
+        margin-top: 10px;
+        margin-bottom: 60px;
+    }
+
+    .input_field {
+        width: 100%;
+        margin-top: 20px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: inset;
+        border-color: black;
+        border-radius: 0;
+        border: solid;
+        height: 30px;
     }

@@ -22,10 +22,32 @@
 </div>
 
 <div class="main">
+    <div class="content_field">
+        <h2>Neuen User erstellen oder bearbeiten</h2>
+
+    </div>
     <div class=content_field>
         <h2>Listenansicht User</h2>
-        <table>
-            <tr class="tabellen_kopf">
+        <table class="tabelle">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Curiculum Vitae</th>
+                <th>Applications</th>
+                <th>Post IDs</th>
+            </tr>
+        </table>
+    </div>
+    <div class="content_field">
+        <h2>Neuen User erstellen oder bearbeiten</h2>
+        
+    </div>
+    <div class=content_field>
+        <h2>Detailansicht User</h2>
+        <table class="tabelle">
+            <tr>
+                <th>Time</th>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Description</th>

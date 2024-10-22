@@ -22,9 +22,9 @@
 </div>
 
 <div class="main">
-<div class=content_field>
-        <h2>Listenansicht Company</h2>
+    <div class=content_field>
         <table class="tabelle">
+        <h2>Listenansicht Company</h2>
             <tr>
                 <th>ID</th>
                 <th>Name</th>
@@ -34,7 +34,22 @@
                 <th>Post IDs</th>
             </tr>
         </table>
-    </div>
+    </div> 
+
+    <div class=content_field>
+        <table class="tabelle">
+        <h2>Detailansicht Company</h2>
+            <tr>
+                <th>Time</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Open Positions</th>
+                <th>Industry Category IDs</th>
+                <th>Post IDs</th>
+            </tr>
+        </table>
+    </div> 
 </div>
 <div class="footer"><a class="breadcrump_link" href="https://github.com/FRITZZZZZZZZZZ/Fallstudie-Stellenanzeigen-Schnuppertag">Dieses Projekt auf GitHub</a></div>
 </body>
