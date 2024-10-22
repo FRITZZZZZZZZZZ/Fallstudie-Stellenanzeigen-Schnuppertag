@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
+use Symfony\Component\VarDumper\Caster\RedisCaster;
 
 class CategoryController extends Controller
 {
@@ -31,7 +32,7 @@ class CategoryController extends Controller
     public function store()
     {
         $category = new Category();
-        $category->industry_id = request('industry');
+        $category->industry = request('industry');
         $category->experience_level = request('experience');
         $category->employement_type = request('employement');
         $category->save();
@@ -49,17 +50,23 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
-        //
+        $category = Category::find($id);
+        return view('category_edit', ['category' => $category]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategoryRequest $request, Category $category)
+    public function update($id)
     {
-        //
+        $category = Category::find($id);
+        $category->industry = request('industry');
+        $category->experience_level = request('experience_level');
+        $category->employement_type = request('employement_type');
+        $category->save();
+        return redirect('/category');
     }
 
     /**

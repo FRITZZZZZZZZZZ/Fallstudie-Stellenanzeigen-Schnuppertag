@@ -35,43 +35,22 @@
                     <th>Industry</th>
                     <th>Experience Level</th>
                     <th>Employement Type</th>
+                    <th>id</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($categorys as $category)
                 <tr>
-                    <td>{{ $category->industry_id }}</td>
+                    <td>{{ $category->industry }}</td>
                     <td>{{ $category->experience_level }}</td>
                     <td>{{ $category->employement_type }}</td>
+                    <td>{{ $category->id }}</td>
+                    <td><a href="http://127.0.0.1:8000/category/edit{{ $category->id }}"><button class="button">edit</button></a></td>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
-    </div>
-
-    <div class=content_field>
-            <h2>Detailansicht Category</h2>
-            <table class="tabelle">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Industry</th>
-                        <th>Experience Level</th>
-                        <th>Employement Type</th>
-                    </tr>
-                </thead>
-                
-                <tbody>
-                @foreach ($categorys as $category)
-                    <tr>
-                        <td>{{ $category->id }}</td>
-                        <td>{{ $category->industry_id }}</td>
-                        <td>{{ $category->experience_level }}</td>
-                        <td>{{ $category->employement_type }}</td>
-                    </tr>
-                @endforeach
-            </tbody>
-            </table>
     </div>
 </div>
     

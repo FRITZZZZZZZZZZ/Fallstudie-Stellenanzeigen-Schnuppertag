@@ -23,18 +23,16 @@
 
 <div class="main">
     <div class="content_field">
-        <h2>Category erstellen</h2>
+        <h2>edit a Category</h2>
         <form class="form" method="POST">
         @csrf <!-- {{ csrf_field() }} -->
-            <input class="input_field" type="text" name="industry" placeholder="Industry">
-            <input class="input_field" type="text" name="experience" placeholder="Experience Level">
-            <input class="input_field" type="text" name="employement" placeholder="Employement Type">
-            <input class="button" type="submit" value="create">
+            <input type="hidden" name="id" readonly value={{ $category->id }}>
+            <input class="input_field" type="text" name="industry" value={{ $category->industry }}>
+            <input class="input_field" type="text" name="experience_level" value={{ $category->experience_level }}>
+            <input class="input_field" type="text" name="employement_type" value={{ $category->employement_type }}>
+            <input class="button" type="submit" value="apply">
         </form>
-    </div>
-
-    <div>
-        <a href="http://127.0.0.1:8000/category"><button class="button">Back to Category</button></a>
+        <a href="http://127.0.0.1:8000/category"><button class="custom_button">Back to Category</button></a>
     </div>
 </div>
     
