@@ -16,40 +16,35 @@
     </div>
     <div class="breadcrumps">
         <div class="breadcrump_env">
-            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link">Category</a>
+            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link" >Category</a>
         </div>
     </div>
 </div>
 
 <div class="main">
-    
-    <div>
-        <a href="http://127.0.0.1:8000/category/create"><button class="custom_button">Create new Category</button></a>
-    </div>
-
     <div class=content_field>
-        <h2>Listenansicht Category</h2>
+        <h2>Detal Category {{ $category->id }}</h2>
         <table class="tabelle">
             <thead>
                 <tr>
                     <th>Industry</th>
                     <th>Experience Level</th>
                     <th>Employement Type</th>
+                    <th>id</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($categorys as $category)
                 <tr>
                     <td>{{ $category->industry }}</td>
                     <td>{{ $category->experience_level }}</td>
                     <td>{{ $category->employement_type }}</td>
-                    <td><a href="http://127.0.0.1:8000/category/edit{{ $category->id }}"><button class="custom_button">edit</button></a></td>
-                    <td><a href="http://127.0.0.1:8000/category/show{{ $category->id }}"><button class="custom_button">detail</button></a></td>
-                    </td>
+                    <td>{{ $category->id }}</td>
                 </tr>
-                @endforeach
             </tbody>
         </table>
+    </div>
+    <div>
+        <a href="http://127.0.0.1:8000/category"><button class="button">Back to Category</button></a>
     </div>
 </div>
     
@@ -58,3 +53,5 @@
 </div>
 
 </body>
+
+

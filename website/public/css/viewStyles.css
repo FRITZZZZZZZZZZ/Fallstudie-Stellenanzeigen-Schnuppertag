@@ -85,6 +85,19 @@
         margin-top: 30px;
     }
 
+    .custom_button {
+        height: 30;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: black;
+        font-weight: 600;
+        font-size: 20;
+        background-color: white;
+        border: solid;
+        cursor: pointer;
+        font-style: georgia;
+    }
+
     .images {
         width: 60%;
         border-color: black;
