@@ -10,7 +10,7 @@
         <div class="view_select">
             <a href="http://127.0.0.1:8000/job"><button class="button">Job</button></a>
             <a href="http://127.0.0.1:8000/company"><button class="button">Company</button></a>
-            <a href="http://127.0.0.1:8000/user"><button class="button">Category</button></a>
+            <a href="http://127.0.0.1:8000/category"><button class="button">Category</button></a>
             <a href="http://127.0.0.1:8000/user"><button class="button">User</button></a>
         </div>
     </div>
