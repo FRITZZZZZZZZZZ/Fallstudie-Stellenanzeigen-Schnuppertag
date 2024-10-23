@@ -16,35 +16,41 @@
     </div>
     <div class="breadcrumps">
         <div class="breadcrump_env">
-            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link" >Category</a>
+            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link" href="http://127.0.0.1:8000/user/" >User > </a><a class="breadcrump_link"> show </a>
         </div>
     </div>
 </div>
 
 <div class="main">
     <div class=content_field>
-        <h2>Detal Category {{ $user->id }}</h2>
+        <h2>Detailansicht User {{ $user->id }}</h2>
         <table class="tabelle">
             <thead>
                 <tr>
-                    <th>Industry</th>
-                    <th>Experience Level</th>
-                    <th>Employement Type</th>
-                    <th>id</th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>E-Mail</th>
+                    <th>Password</th>
+                    <th>Description</th>
+                    <th>curriculum_vitae_path</th>
+                    <th>applications</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ $user->industry }}</td>
-                    <td>{{ $user->experience_level }}</td>
-                    <td>{{ $user->employement_type }}</td>
                     <td>{{ $user->id }}</td>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->password }}</td>
+                    <td>{{ $user->description }}</td>
+                    <td>{{ $user->curriculum_vitae_path }}</td>
+                    <td>{{ $user->applications }}</td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div>
-        <a href="http://127.0.0.1:8000/user"><button class="button">Back to Category</button></a>
+        <a href="http://127.0.0.1:8000/user"><button class="button">Back to User</button></a>
     </div>
 </div>
     

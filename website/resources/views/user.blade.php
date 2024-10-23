@@ -16,7 +16,7 @@
     </div>
     <div class="breadcrumps">
         <div class="breadcrump_env">
-            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link">Category</a>
+            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link">User</a>
         </div>
     </div>
 </div>
@@ -24,25 +24,29 @@
 <div class="main">
     
     <div>
-        <a href="http://127.0.0.1:8000/user/create"><button class="custom_button">Create new Category</button></a>
+        <a href="http://127.0.0.1:8000/user/create"><button class="custom_button">Create new User</button></a>
     </div>
 
     <div class=content_field>
-        <h2>Listenansicht Category</h2>
+        <h2>Listenansicht User</h2>
         <table class="tabelle">
             <thead>
                 <tr>
-                    <th>Industry</th>
-                    <th>Experience Level</th>
-                    <th>Employement Type</th>
+                    <th>Name</th>
+                    <th>E-Mail</th>
+                    <th>Password</th>
+                    <th>Description</th>
+                    <th>curriculum_vitae_path</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($users as $user)
                 <tr>
-                    <td>{{ $user->industry }}</td>
-                    <td>{{ $user->experience_level }}</td>
-                    <td>{{ $user->employement_type }}</td>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <td>{{ $user->password }}</td>
+                    <td>{{ $user->description }}</td>
+                    <td>{{ $user->curriculum_vitae_path }}</td>
                     <td><a href="http://127.0.0.1:8000/user/edit{{ $user->id }}"><button class="custom_button">edit</button></a></td>
                     <td><a href="http://127.0.0.1:8000/user/show{{ $user->id }}"><button class="custom_button">detail</button></a></td>
                     </td>

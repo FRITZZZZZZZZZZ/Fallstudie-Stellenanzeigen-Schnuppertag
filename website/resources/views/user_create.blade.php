@@ -16,25 +16,28 @@
     </div>
     <div class="breadcrumps">
         <div class="breadcrump_env">
-            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link">Category</a>
+            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link" href="http://127.0.0.1:8000/user">User > </a><a class="breadcrump_link"> Create</a>
         </div>
     </div>
 </div>
 
 <div class="main">
     <div class="content_field">
-        <h2>Category erstellen</h2>
+        <h2>Create User</h2>
         <form class="form" method="POST">
         @csrf <!-- {{ csrf_field() }} -->
-            <input class="input_field" type="text" name="industry" placeholder="Industry">
-            <input class="input_field" type="text" name="experience" placeholder="Experience Level">
-            <input class="input_field" type="text" name="employement" placeholder="Employement Type">
+            <input type="text" name="name"  placeholder="name">
+            <input type="text" name="email"  placeholder="email">
+            <input type="text" name="password"  placeholder="password">
+            <input type="text" name="description"  placeholder="description">
+            <input type="text" name="curriculum_vitae_path"  placeholder="curriculum_vitae_path">
+            <input type="text" name="applications" placeholder="applications">
             <input class="button" type="submit" value="create">
         </form>
     </div>
 
     <div>
-        <a href="http://127.0.0.1:8000/user"><button class="button">Back to Category</button></a>
+        <a href="http://127.0.0.1:8000/user"><button class="button">Back to User</button></a>
     </div>
 </div>
     

@@ -28,9 +28,12 @@ class UserController extends Controller
     public function store()
     {
         $user = new User();
-        $user->industry = request('industry');
-        $user->experience_level = request('experience');
-        $user->employement_type = request('employement');
+        $user->name = request('name');
+        $user->email = request('email');
+        $user->password = request('password');
+        $user->description = request('description');
+        $user->curriculum_vitae_path = request('curriculum_vitae_path');
+        $user->applications = request('applications');
         $user->save();
         return view('user_create');
     }
@@ -59,9 +62,12 @@ class UserController extends Controller
     public function update($id)
     {
         $user = User::find($id);
-        $user->industry = request('industry');
-        $user->experience_level = request('experience_level');
-        $user->employement_type = request('employement_type');
+        $user->name = request('name');
+        $user->email = request('email');
+        $user->password = request('password');
+        $user->description = request('description');
+        $user->curriculum_vitae_path = request('curriculum_vitae_path');
+        $user->applications = request('applications');
         $user->save();
         return redirect('/user');
     }

@@ -26,13 +26,16 @@
         <h2>edit a Category</h2>
         <form class="form" method="POST">
         @csrf <!-- {{ csrf_field() }} -->
-            <input type="hidden" name="id" readonly value={{ $category->id }}>
-            <input class="input_field" type="text" name="industry" value={{ $category->industry }}>
-            <input class="input_field" type="text" name="experience_level" value={{ $category->experience_level }}>
-            <input class="input_field" type="text" name="employement_type" value={{ $category->employement_type }}>
+            <input type="hidden" name="id" readonly value={{ $user->id }}>
+            <input class="input_field" type="text" name="name" value={{ $user->name }}>
+            <input class="input_field" type="text" name="email" value={{ $user->email }}>
+            <input class="input_field" type="text" name="password" value={{ $user->password }}>
+            <input class="input_field" type="text" name="description" value={{ $user->description }}>
+            <input class="input_field" type="text" name="curriculum_vitae_path" value={{ $user->curriculum_vitae_path }}>
+            <input class="input_field" type="text" name="applications" value={{ $user->applications }}>
             <input class="button" type="submit" value="apply">
         </form>
-        <a href="http://127.0.0.1:8000/category"><button class="custom_button">Back to Category</button></a>
+        <a href="http://127.0.0.1:8000/user"><button class="custom_button">Back to User</button></a>
     </div>
 </div>
     
