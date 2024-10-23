@@ -16,7 +16,7 @@
     </div>
     <div class="breadcrumps">
         <div class="breadcrump_env">
-            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link">Category</a>
+            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link">Job</a>
         </div>
     </div>
 </div>
@@ -24,25 +24,33 @@
 <div class="main">
     
     <div>
-        <a href="http://127.0.0.1:8000/job_offer/create"><button class="custom_button">Create new Category</button></a>
+        <a href="http://127.0.0.1:8000/job_offer/create"><button class="custom_button">Create new Job</button></a>
     </div>
 
     <div class=content_field>
-        <h2>Listenansicht Category</h2>
+        <h2>Listenansicht Job</h2>
         <table class="tabelle">
             <thead>
                 <tr>
-                    <th>Industry</th>
-                    <th>Experience Level</th>
-                    <th>Employement Type</th>
+                    <th>Company id</th>
+                    <th>Titel</th>
+                    <th>Applicant id</th>
+                    <th>Category id</th>
+                    <th>location</th>
+                    <th>responsibilities</th>
+                    <th>requierements</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($job_offers as $job_offer)
                 <tr>
-                    <td>{{ $job_offer->industry }}</td>
-                    <td>{{ $job_offer->experience_level }}</td>
-                    <td>{{ $job_offer->employement_type }}</td>
+                    <td>{{ $job_offer->company_id }}</td>
+                    <td>{{ $job_offer->titel }}</td>
+                    <td>{{ $job_offer->applicant_id }}</td>
+                    <td>{{ $job_offer->category_id }}</td>
+                    <td>{{ $job_offer->location }}</td>
+                    <td>{{ $job_offer->responsibilities }}</td>
+                    <td>{{ $job_offer->requierements }}</td>
                     <td><a href="http://127.0.0.1:8000/job_offer/edit{{ $job_offer->id }}"><button class="custom_button">edit</button></a></td>
                     <td><a href="http://127.0.0.1:8000/job_offer/show{{ $job_offer->id }}"><button class="custom_button">detail</button></a></td>
                     </td>

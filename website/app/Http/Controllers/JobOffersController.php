@@ -22,7 +22,7 @@ class JobOffersController extends Controller
      */
     public function create()
     {
-        return view('category_create');
+        return view('job_offer_create');
     }
 
     /**
@@ -31,11 +31,15 @@ class JobOffersController extends Controller
     public function store()
     {
         $job_offer = new Job_offers();
-        $job_offer->industry = request('industry');
-        $job_offer->experience_level = request('experience');
-        $job_offer->employement_type = request('employement');
+        $job_offer->company_id = request('company_id');
+        $job_offer->titel = request('titel');
+        $job_offer->applicant_id = request('applicant_id');
+        $job_offer->category_id = request('category_id');
+        $job_offer->location = request('location');
+        $job_offer->responsibilities = request('responsibilities');
+        $job_offer->requierements = request('requierements');
         $job_offer->save();
-        return view('category_create');
+        return view('job_offer_create');
     }
 
     /**
@@ -44,7 +48,7 @@ class JobOffersController extends Controller
     public function show($id)
     {
         $job_offer = Job_offers::find($id);
-        return view('category_show', ['job_offer' => $job_offer]);
+        return view('job_offer_show', ['job_offer' => $job_offer]);
     }
 
     /**
@@ -53,7 +57,7 @@ class JobOffersController extends Controller
     public function edit($id)
     {
         $job_offer = Job_offers::find($id);
-        return view('category_edit', ['job_offer' => $job_offer]);
+        return view('job_offer_edit', ['job_offer' => $job_offer]);
     }
 
     /**
@@ -62,9 +66,13 @@ class JobOffersController extends Controller
     public function update($id)
     {
         $job_offer = Job_offers::find($id);
-        $job_offer->industry = request('industry');
-        $job_offer->experience_level = request('experience_level');
-        $job_offer->employement_type = request('employement_type');
+        $job_offer->company_id = request('company_id');
+        $job_offer->titel = request('titel');
+        $job_offer->applicant_id = request('applicant_id');
+        $job_offer->category_id = request('category_id');
+        $job_offer->location = request('location');
+        $job_offer->responsibilities = request('responsibilities');
+        $job_offer->requierements = request('requierements');
         $job_offer->save();
         return redirect('/job_offer');
     }

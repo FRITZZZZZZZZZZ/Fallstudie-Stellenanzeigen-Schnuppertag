@@ -16,25 +16,29 @@
     </div>
     <div class="breadcrumps">
         <div class="breadcrump_env">
-            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link">Category</a>
+            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link" href="http://127.0.0.1:8000/job_offer">Job > </a><a class="breadcrump_link">create</a>
         </div>
     </div>
 </div>
 
 <div class="main">
     <div class="content_field">
-        <h2>Category erstellen</h2>
+        <h2>create Job</h2>
         <form class="form" method="POST">
         @csrf <!-- {{ csrf_field() }} -->
-            <input class="input_field" type="text" name="industry" placeholder="Industry">
-            <input class="input_field" type="text" name="experience" placeholder="Experience Level">
-            <input class="input_field" type="text" name="employement" placeholder="Employement Type">
+        <input class="input_field" type="text" name="company_id" placeholder="company_id">
+            <input class="input_field" type="text" name="titel" placeholder="titel">            
+            <input class="input_field" type="text" name="applicant_id" placeholder="applicant_id">
+            <input class="input_field" type="text" name="category_id" placeholder="category_id">
+            <input class="input_field" type="text" name="location" placeholder="location">
+            <input class="input_field" type="text" name="responsibilities" placeholder="responsibilities">
+            <input class="input_field" type="text" name="requierements" placeholder="requierements">
             <input class="button" type="submit" value="create">
         </form>
     </div>
 
     <div>
-        <a href="http://127.0.0.1:8000/job_offer"><button class="button">Back to Category</button></a>
+        <a href="http://127.0.0.1:8000/job_offer"><button class="button">Back to Job</button></a>
     </div>
 </div>
     

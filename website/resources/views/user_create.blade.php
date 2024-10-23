@@ -26,12 +26,12 @@
         <h2>Create User</h2>
         <form class="form" method="POST">
         @csrf <!-- {{ csrf_field() }} -->
-            <input type="text" name="name"  placeholder="name">
-            <input type="text" name="email"  placeholder="email">
-            <input type="text" name="password"  placeholder="password">
-            <input type="text" name="description"  placeholder="description">
-            <input type="text" name="curriculum_vitae_path"  placeholder="curriculum_vitae_path">
-            <input type="text" name="applications" placeholder="applications">
+            <input class="input_field" type="text" name="name"  placeholder="name">
+            <input class="input_field" type="text" name="email"  placeholder="email">
+            <input class="input_field" type="text" name="password"  placeholder="password">
+            <input class="input_field" type="text" name="description"  placeholder="description">
+            <input class="input_field" type="text" name="curriculum_vitae_path"  placeholder="curriculum_vitae_path">
+            <input class="input_field" type="text" name="applications" placeholder="applications">
             <input class="button" type="submit" value="create">
         </form>
     </div>

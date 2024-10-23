@@ -16,35 +16,43 @@
     </div>
     <div class="breadcrumps">
         <div class="breadcrump_env">
-            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link" >Category</a>
+            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link" href="http://127.0.0.1:8000/job">Job > </a><a class="breadcrump_link"> show </a>
         </div>
     </div>
 </div>
 
 <div class="main">
     <div class=content_field>
-        <h2>Detal Category {{ $job_offer->id }}</h2>
+        <h2>Detail Job {{ $job_offer->id }}</h2>
         <table class="tabelle">
             <thead>
                 <tr>
-                    <th>Industry</th>
-                    <th>Experience Level</th>
-                    <th>Employement Type</th>
-                    <th>id</th>
+                    <th>ID</th>
+                    <th>Company id</th>
+                    <th>Titel</th>
+                    <th>Applicant id</th>
+                    <th>Category id</th>
+                    <th>location</th>
+                    <th>responsibilities</th>
+                    <th>requierements</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>{{ $job_offer->industry }}</td>
-                    <td>{{ $job_offer->experience_level }}</td>
-                    <td>{{ $job_offer->employement_type }}</td>
                     <td>{{ $job_offer->id }}</td>
+                    <td>{{ $job_offer->company_id }}</td>
+                    <td>{{ $job_offer->titel }}</td>
+                    <td>{{ $job_offer->applicant_id }}</td>
+                    <td>{{ $job_offer->category_id }}</td>
+                    <td>{{ $job_offer->location }}</td>
+                    <td>{{ $job_offer->responsibilities }}</td>
+                    <td>{{ $job_offer->requierements }}</td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div>
-        <a href="http://127.0.0.1:8000/job_offer"><button class="button">Back to Category</button></a>
+        <a href="http://127.0.0.1:8000/job_offer"><button class="button">Back to Job</button></a>
     </div>
 </div>
     
