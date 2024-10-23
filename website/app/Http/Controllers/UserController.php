@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+
 
 class UserController extends Controller
 {
     public function index()
     {
-        $categorys = Category::all();
-        return view('category', ['categorys' => $categorys]);
+        $users = User::all();
+        return view('user', ['users' => $users]);
     }
 
     /**
@@ -17,7 +19,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('category_create');
+        return view('user_create');
     }
 
     /**
@@ -25,12 +27,12 @@ class UserController extends Controller
      */
     public function store()
     {
-        $category = new Category();
-        $category->industry = request('industry');
-        $category->experience_level = request('experience');
-        $category->employement_type = request('employement');
-        $category->save();
-        return view('category_create');
+        $user = new User();
+        $user->industry = request('industry');
+        $user->experience_level = request('experience');
+        $user->employement_type = request('employement');
+        $user->save();
+        return view('user_create');
     }
 
     /**
@@ -38,8 +40,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $category = Category::find($id);
-        return view('category_show', ['category' => $category]);
+        $user = User::find($id);
+        return view('user_show', ['user' => $user]);
     }
 
     /**
@@ -47,8 +49,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::find($id);
-        return view('category_edit', ['category' => $category]);
+        $user = User::find($id);
+        return view('user_edit', ['user' => $user]);
     }
 
     /**
@@ -56,18 +58,18 @@ class UserController extends Controller
      */
     public function update($id)
     {
-        $category = Category::find($id);
-        $category->industry = request('industry');
-        $category->experience_level = request('experience_level');
-        $category->employement_type = request('employement_type');
-        $category->save();
-        return redirect('/category');
+        $user = User::find($id);
+        $user->industry = request('industry');
+        $user->experience_level = request('experience_level');
+        $user->employement_type = request('employement_type');
+        $user->save();
+        return redirect('/user');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Category $category)
+    public function destroy(User $user)
     {
         //
     }
