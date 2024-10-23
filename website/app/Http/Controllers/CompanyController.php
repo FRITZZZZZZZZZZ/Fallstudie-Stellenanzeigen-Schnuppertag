@@ -31,9 +31,11 @@ class CompanyController extends Controller
     public function store()
     {
         $company = new company();
-        $company->industry = request('industry');
-        $company->experience_level = request('experience');
-        $company->employement_type = request('employement');
+        $company->name = request('name');
+        $company->description = request('description');
+        $company->post_ids = request('post_ids');
+        $company->industry_category_ids = request('industry_category_ids');
+        $company->open_position_ids = request('open_position_ids');
         $company->save();
         return view('company_create');
     }
@@ -62,9 +64,11 @@ class CompanyController extends Controller
     public function update($id)
     {
         $company = company::find($id);
-        $company->industry = request('industry');
-        $company->experience_level = request('experience_level');
-        $company->employement_type = request('employement_type');
+        $company->name = request('name');
+        $company->description = request('experience');
+        $company->post_ids = request('employement');
+        $company->industry_category_ids = request('industry_category_ids');
+        $company->open_position_ids = request('open_position_ids');
         $company->save();
         return redirect('/company');
     }

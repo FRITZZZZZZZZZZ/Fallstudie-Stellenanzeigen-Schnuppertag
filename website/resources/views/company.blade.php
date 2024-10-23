@@ -16,7 +16,7 @@
     </div>
     <div class="breadcrumps">
         <div class="breadcrump_env">
-            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link">Category</a>
+            <a class="breadcrump_link" href="http://127.0.0.1:8000/">Home > </a><a class="breadcrump_link">Company</a>
         </div>
     </div>
 </div>
@@ -24,25 +24,29 @@
 <div class="main">
     
     <div>
-        <a href="http://127.0.0.1:8000/company/create"><button class="custom_button">Create new Category</button></a>
+        <a href="http://127.0.0.1:8000/company/create"><button class="custom_button">Create new Company</button></a>
     </div>
 
     <div class=content_field>
-        <h2>Listenansicht Category</h2>
+        <h2>Listenansicht Company</h2>
         <table class="tabelle">
             <thead>
                 <tr>
-                    <th>Industry</th>
-                    <th>Experience Level</th>
-                    <th>Employement Type</th>
+                    <th>name</th>
+                    <th>description</th>
+                    <th>post_ids</th>
+                    <th>industry_category_ids</th>
+                    <th>open_position_ids</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($companys as $company)
                 <tr>
-                    <td>{{ $company->industry }}</td>
-                    <td>{{ $company->experience_level }}</td>
-                    <td>{{ $company->employement_type }}</td>
+                    <td>{{ $company->name }}</td>
+                    <td>{{ $company->description }}</td>
+                    <td>{{ $company->post_ids }}</td>
+                    <td>{{ $company->industry_category_ids }}</td>
+                    <td>{{ $company->open_position_ids }}</td>
                     <td><a href="http://127.0.0.1:8000/company/edit{{ $company->id }}"><button class="custom_button">edit</button></a></td>
                     <td><a href="http://127.0.0.1:8000/company/show{{ $company->id }}"><button class="custom_button">detail</button></a></td>
                     </td>

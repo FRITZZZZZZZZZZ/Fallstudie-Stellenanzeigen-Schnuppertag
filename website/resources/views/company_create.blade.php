@@ -26,10 +26,12 @@
         <h2>Category erstellen</h2>
         <form class="form" method="POST">
         @csrf <!-- {{ csrf_field() }} -->
-            <input class="input_field" type="text" name="industry" placeholder="Industry">
-            <input class="input_field" type="text" name="experience" placeholder="Experience Level">
-            <input class="input_field" type="text" name="employement" placeholder="Employement Type">
-            <input class="button" type="submit" value="create">
+        <input class="input_field" type="text" name="name" placeholder="name">
+        <input class="input_field" type="text" name="description" placeholder="description">
+        <input class="input_field" type="text" name="post_ids" placeholder="post ids">
+        <input class="input_field" type="text" name="industry_category_ids" placeholder="industry category ids">
+        <input class="input_field" type="text" name="open_position_ids" placeholder="open position ids">
+        <input class="button" type="submit" value="create">
         </form>
     </div>
 
